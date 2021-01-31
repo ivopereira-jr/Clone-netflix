@@ -1,0 +1,171 @@
+:root {
+  --red: #e50914;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background: var(--black);
+  font-family: "Arial", Times, serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+header .logo {
+  height: 50px;
+  display: grid;
+  grid-template-columns: 170px 100px;
+}
+
+header .logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.logo .logo-kids {
+  position: relative;
+  top: 20px;
+  height: 30px;
+}
+
+.logo .logo-kids img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 22px;
+  transition: all 300ms;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+/* banner principal */
+.banner-principal {
+  min-height: 70vh;
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55) 100%),
+    url("/images/banner.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 8px solid #222;
+}
+
+.banner-principal .container {
+  width: 80%;
+}
+
+.titulo {
+  margin-top: 10%;
+  font-size: 36px;
+  line-height: 46px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.descricao {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.button {
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 15px 30px;
+  margin-right: 15px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 400ms ease all;
+}
+
+.button i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.button:hover {
+  color: var(--black);
+  background-color: white;
+}
+
+.item {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+.item img {
+  height: 100%;
+}
+
+/*player content*/
+.player-content {
+  padding-top: 20px;
+}
+
+.player-content .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-content .box-player {
+  width: 70%;
+  height: 450px;
+}
+
+.player-content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.mini-cards {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.mini-cards .card {
+  margin-top: 3px;
+}
+
+.mini-cards::-webkit-scrollbar {
+  width: 5px;
+}
+
+.mini-cards::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 2px;
+}
+
+.mini-cards::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(63, 63, 63, 0.884);
+}

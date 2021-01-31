@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="36x36"
+      href="/images/assets/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <title>Clone | Netflix</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/assets/logo.svg" alt="logo da netflix" />
+          <span class="logo-kids">
+            <img src="images/assets/kids-logo.png" alt="" />
+          </span>
+        </div>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="#">Séries</a>
+          <a href="#">Filmes</a>
+          <a href="#">Desenhos animados</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="player-content">
+      <div class="container">
+        <div class="box-player">
+          <iframe
+            src="https://www.youtube.com/embed/jnxIRXouDsw"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="mini-cards">
+          <div class="card" id="M7jJQFoyoGU">
+            <img src="images/mini-player/mini-1.jpg" alt="" />
+          </div>
+          <div class="card" id="6lVTAyG6jq8">
+            <img src="images/mini-player/mini-2.jpg" alt="" />
+          </div>
+          <div class="card" id="VSfoV_xrh78">
+            <img src="images/mini-player/mini-3.jpg" alt="" />
+          </div>
+          <div class="card" id="SPt9vWekqm0">
+            <img src="images/mini-player/mini-4.jpg" alt="" />
+          </div>
+          <div class="card" id="wBxlJGo9iv4">
+            <img src="images/mini-player/mini-5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const cards = document.querySelectorAll(".card")
+      const player = document.querySelector(".box-player")
+
+      cards.forEach(card =>
+        card.addEventListener("click", function () {
+          const cardId = card.getAttribute("id")
+
+          player.querySelector(
+            "iframe"
+          ).src = `https://www.youtube.com/embed/${cardId}`
+        })
+      )
+    </script>
+  </body>
+</html>
